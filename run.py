@@ -5,6 +5,26 @@ from flask import send_from_directory
 
 app = Flask(__name__)
 
+@app.route('/blackjack', methods=['POST'])
+def blackjack():
+    #  TODO
+    return 'blackjack'
+
+@app.route('/video_poker', methods=['POST'])
+def video_poker():
+    #  TODO
+    return 'video_poker'
+
+@app.route('/craps', methods=['POST'])
+def craps():
+    #  TODO
+    return 'craps'
+
+@app.route('/roulette', methods=['POST'])
+def roulette():
+    #  TODO
+    return 'roulette'
+
 @app.route('/', defaults=dict(filename=None))
 @app.route('/<path:filename>', methods=['GET', 'POST'])
 def index(filename):
